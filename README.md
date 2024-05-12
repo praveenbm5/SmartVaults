@@ -1,18 +1,19 @@
-# Hybrid Custody™ using Layer 2 Smart Vaults™ - Protocol & Technology Demo
+# Hybrid Custody™ using Layer 2 Smart Vaults™ - POC Implementation & Technology Demo
 
 **Hybrid Custody™** using Layer 2 Smart Vaults™ makes Bitcoin and other similar Altcoins **Unstealable, Unlosable and Unconfiscatable** for all practical purposes.
 
-Smart Vaults™ (layer 2) are like Multisig or MPC Vaults on steroids and you can assign priorities to private-keys participating in a Smart Vault™. 
+Smart Vaults™ (Layer 2) are like Multisig or MPC Vaults on steroids and you can assign priorities to private-keys participating in a Smart Vault™.
 
 ## Next-Gen Scalable Security
 
-1. "Unlocking" and "Spending" from your Smart Vaults™ are distinct events (transactions) with programmable delay between them unlike MultiSig Transactions.
-2. The mandatory "Unlock" which is visible on-chain as a transaction alerts all participants of a Smart Vault™ to take corrective measures if it was not done by them in the first place.
-2. When `m private-keys` are presumably used by an adversary to unlock your Smart Vault™ locked with `n private-keys`, you can use any `m+1 private-keys upto n` to override the unlock and recover your Bitcoin i.e. `m-to-n of n`. (Assuming all private-keys have equal priority.)
-3. Stealing becomes impossible unless adversaries have all the `n private-keys`.
-4. Can be customized to allow some private-keys and combinations to override other private-keys and combinations.
-4. Protects against hacks, social engineering, insider fraud, etc.
-5. Optional on-chain “Out of Band” Authentication & Autherization with Hardware Tokens (proprietary technology).
+1. "Unlocking" and "Spending" from your Smart Vaults™ are distinct events (transactions) with a programmable delay between them unlike MultiSig/MPC Vaults.
+2. The mandatory "Unlock" which is visible on-chain as a transaction alerts all participants of a Smart Vault™ to take corrective actions if the unlock was not initiated by them in the first place.
+3. When `m private-keys` are presumably used by an adversary to unlock-and-spend from your Smart Vault™ locked with `n private-keys`, you can use any `m+1 private-keys upto n` to override the malicious unlock-and-spend attempt and recover your Bitcoin before the preset delay expires i.e. `m-to-n of n`. (Assuming all private-keys have equal priority.)
+4. Stealing becomes impossible unless adversaries have all the `n private-keys`.
+5. Can be customized to allow some private-keys and combinations to override other private-keys and combinations.
+6. Uses simple yet powerful Zero-Knowledge Proofs to determine which private-keys and combinations take precedence over other private-keys and combinations.
+7. Protects against hacks, social engineering, insider fraud, etc.
+8. Optional on-chain “Out of Band” Authentication & Autherization with Hardware Tokens (proprietary technology).
 
 ## Supercharged Safety
 
@@ -59,22 +60,22 @@ https://youtu.be/IQqM77cRdIM (Click to play)
 ## Proof of Concept Implementation - Setup (Docker)
 
 1. Install Docker if not already installed - https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04
-2. Clone or Checkout this repository - `git clone <url>`
+2. Clone or Checkout this repository - `git clone https://github.com/praveenbm5/SmartVaults.git`
 3. Change working directory to cloned repo directory - `cd SmartVaults`
 4. Important - Customize Dockerfile included in the repo to download appropriate bitcoin binary archive for the architecture and platform you are working on
 5. Build Image - `sudo docker build -t smartvaults .`
 6. Run Image - `sudo docker run -it smartvaults`
-7. Delete Image - `sudo docker images` to get `<IMAGE ID>` and `sudo docker rmi -f <IMAGE ID>` to remove the image
+7. Delete Image - `sudo docker images` to get `<IMAGE ID>` and `sudo docker rmi -f <IMAGE ID>` to remove the image once you are done exploring this demo.
 
 ## Proof of Concept Implementation - Demo
 
 1. Open a shell/cmd in the project/repository's root directory. (SmartVaults)
-2. Inspect and run `./SmartVault.Demo.Setup_and_Recovery_Using_Option_1.sh` to understand Smart Vault™ setup (Participants: User & Ledger) and recovery using Option 1 which requires only User's private-key. Useful when Ledger has lost its private-keys due to unforeseen circumstances or when User wants to independently terminate the Smart Vault™.
+2. Inspect and run `./SmartVault.Demo.Setup_and_Recovery_Using_Option_1.sh` to understand Smart Vault™ setup (Participants: User & Ledger) and recovery using Option 1 which requires only User's private-key. Useful when Ledger has lost its private-keys due to unforeseen circumstances or when User wants to independently terminate the Smart Vault™ without any dependence on Ledger.
 3. Inspect and run `./SmartVault.Demo.Setup_and_Recovery_Using_Option_2.sh` to understand Smart Vault™ setup (Participants: User & Ledger) and recovery using Option 2 which requires only Ledger's private-key. Useful when User has lost his private-keys. Option 2 has lower priority than Option 1. So User can override any attempt by Ledger to unlock the Smart Vault™ without his consent.
 4. Inspect and run `./SmartVault.Demo.Setup_and_Recovery_Using_Option_3.sh` to understand Smart Vault™ setup (Participants: User & Ledger) and recovery using Option 3 which requires both User's and Ledger's private-keys. Option 3 has higher priority than Option 1 and Option 2. Useful when either User's or Ledger's private-key is presumed stolen and was used to unlock the Smart Vault™. 
-5. All demos are designed to run on a RegTest network and create a fresh RegTest node to interface with - SmartVault.Demo.Initialize_RegTest_Network.sh (executed inside demo script) 
-6. All demos follow the same Smart Vault™ setup process with "User" and "Ledger" as paritcipants - SmartVault.Demo.Setup.sh (executed inside demo script) 
-7. All demos write detailed logs to respective log files in the `logs` folder and you can go through sample logs from the above demos in the `logs` folder to get an idea about how these demos work before you run them on your machine.
+5. All demos are designed to run on a Bitcoin RegTest network and create a fresh RegTest node to communicate with. See SmartVault.Demo.Initialize_RegTest_Network.sh (executed inside above demo scripts) for more details.
+6. All demos follow the same Smart Vault™ setup process with "User" and "Ledger" as paritcipants. See SmartVault.Demo.Setup.sh (executed inside above demo scripts) for more info.
+7. All demos write detailed logs to respective log files in the `logs` folder and you can go through sample logs from the above demos in the `logs` folder to get an idea about how these demos work even before you run them on your machine.
 
 ## Legal Notice
 
