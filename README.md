@@ -2,7 +2,13 @@
 
 **Hybrid Custody™** using Layer 2 Smart Vaults™ makes Bitcoin and other similar Altcoins **Unstealable, Unlosable and Unconfiscatable** for all practical purposes.
 
-Smart Vaults™ (Layer 2) are like Multisig or MPC Vaults on steroids and you can assign priorities to private-keys participating in a Smart Vault™.
+Hardware and software we use to secure our Bitcoin are most likely leaking critical information in ways we don't know yet to a myriad of entities not necessarily acting in our best interest.
+
+This protocol and framework assumes that our private-keys will be lost or stolen, sooner than latter, and provides recourse even in those situations.
+
+## Smart Vaults
+
+Smart Vaults™ (Layer 2) are like Multisig or MPC Vaults on steroids. Key difference is that you can assign priorities to private-keys participating in a Smart Vault™.
 
 ## Next-Gen Scalable Security
 
@@ -21,21 +27,31 @@ Smart Vaults™ (Layer 2) are like Multisig or MPC Vaults on steroids and you ca
 2. Can tolerate loss of `n-1 private-keys`
 3. Useful for disaster management, accidental loss, unexpected death and factors beyond control.
 
-## Discussion
+# Hybrid Custody using L2 Smart Vaults
 
 To put it briefly, Hybrid Custody™ is a framework built on top of Smart Vaults™ and combines the best of "Self Custody" and "Managed Custody".
 
-You have absolute control of your private-keys and coins just like "Self Custody" and you can recover your Bitcoin even when all your private-keys are lost or stolen as if you opted for fully "Managed Custody" and you never needed to manage your private-keys and coins to begin with. Its almost magic!
+You have absolute control of your private-keys and coins just like "Self Custody" and you can recover your Bitcoin even when all your private-keys are lost or stolen as if you opted for fully "Managed Custody" and you never needed to manage your private-keys to begin with. It's almost magic!
+
+With just a simple MultiSig transaction and a couple of Partially Signed Bitcoin Transactions distributed rather cleverly between the participants, Hybrid Custody using L2 Smart Vaults drastically increases the safety/security of your Bitcoin and even handles inheritance for you without any prior arrangements with your beneficiaries.
 
 This repository demostrates the feasibility and steps involved during setup, termination and recovery from Smart Vaults™ in their most basic form with just one private-key from "User" and one private-key from "Ledger" who doubles up as a Hybrid Custody Provider. 
 
-Once you get this, you can easily extend your undertanding to include more factors/private-keys as well as complex contingency planning using multiple factors/private-keys from multiple participants.
+When User's private key is lost, he can recover his Bitcoin using just Ledger's private key as with any Managed Custody Provider.
 
-The following explanation, videos and source code made available through this repository demonstrate Hybrid Custody as a service by Hardware Wallet vendors such as Ledger and Trezor.
+And when User's private-key is stolen and used to initiate the unlock-and-spend process, User can cosign a spending transaction with Ledger, override the attempt and safely recover your Bitcoin.
+
+Lastly, if Ledger tries to steal User's Bitcoin using it's private-key, User can always override that unlock-and-spend attempt and safely transfer his Bitcoin to wherever he wishes using just his private-key.
+
+The POC Implementation in this GitHub repo clearly demonstrates all these scenarios.
+
+Once you get this, you can easily extend your undertanding to include more factors/private-keys as well as complex contingency planning using multiple factors/private-keys from multiple participants.
 
 >Disclaimer: Ledger's name is used hypothetically as a Hybrid Custodian for ease of understanding and no relation is implied to Ledger or with anybody at Ledger.
 
 >Proprietary Technology - See **Legal Notice** below!
+
+Everything is explained in detail in the videos below.
 
 ## Hybrid Custody using Hardware Wallets - Intro (Video)
 
