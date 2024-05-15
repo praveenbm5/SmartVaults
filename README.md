@@ -2,11 +2,17 @@
 
 **Hybrid Custody™** using Layer 2 Smart Vaults™ makes Bitcoin and other similar Altcoins **Unstealable, Unlosable and Unconfiscatable** for all practical purposes.
 
-Hardware and software we use to secure our Bitcoin are most likely leaking critical information in ways we don't know yet to a myriad of entities not necessarily acting in our best interest.
+While securing one’s private-keys might seem trivial at first but ensuring safety i.e. preventing data loss (lost private-key) along with absolute security i.e. preventing data theft (stolen private key) is very difficult if not impossible. It is a balancing act and one has to sacrifice a bit of security to increase safety and vice versa. Eg. Increasing the number of places where you store copies of your private-keys increases safety but decreases security as they can now be stolen from more places than before.
 
-This protocol and framework assumes that our private-keys will be lost or stolen, sooner than latter, and provides recourse even in those situations.
+Several methods and devices were proposed and implemented to alleviate this problem at least partially but none are as flexible and secure as one would desire them to be.
 
-## Smart Vaults
+Moreover, most devices, platforms and frameworks we use to generate our private-keys, store them securely and sign transactions with them have many known and unknown vulnerabilities. Relying solely on these contraptions and OPSEC to secure our funds/tokens can be risky to say the least.
+
+Inheritance planning has also been a pain point for Crypto adoption. Self Custody of Bitcoin necessisates that we share the  credentials and more with our beneficiaries before hand complicating OPSEC and personal lives for everyone involved. Many a times, sharing credentials with beneficiaries is not even practically possible. Eg. Children.
+
+This protocol and framework assumes that our private-keys will be lost or stolen, sooner than latter, and provides recourse even in those situations while handling inheritance seamlessly.
+
+# Smart Vaults
 
 Smart Vaults™ (Layer 2) are like Multisig or MPC Vaults on steroids. Key difference is that you can assign priorities to private-keys participating in a Smart Vault™.
 
@@ -17,7 +23,7 @@ Smart Vaults™ (Layer 2) are like Multisig or MPC Vaults on steroids. Key diffe
 3. When `m private-keys` are presumably used by an adversary to unlock-and-spend from your Smart Vault™ locked with `n private-keys`, you can use any `m+1 private-keys upto n` to override the malicious unlock-and-spend attempt and recover your Bitcoin before the preset delay expires i.e. `m-to-n of n`. (Assuming all private-keys have equal priority.)
 4. Stealing becomes impossible unless adversaries have all the `n private-keys`.
 5. Can be customized to allow some private-keys and combinations to override other private-keys and combinations.
-6. Uses simple yet powerful Zero-Knowledge Proofs to determine which private-keys and combinations take precedence over other private-keys and combinations.
+6. Use simple yet powerful Zero-Knowledge Proofs to determine which private-keys and combinations take precedence over other private-keys and combinations.
 7. Protects against hacks, social engineering, insider fraud, etc.
 8. Optional on-chain “Out of Band” Authentication & Autherization with Hardware Tokens (proprietary technology).
 
@@ -27,19 +33,19 @@ Smart Vaults™ (Layer 2) are like Multisig or MPC Vaults on steroids. Key diffe
 2. Can tolerate loss of `n-1 private-keys`
 3. Useful for disaster management, accidental loss, unexpected death and factors beyond control.
 
-# Hybrid Custody using L2 Smart Vaults
+# Hybrid Custody using Smart Vaults
 
 To put it briefly, Hybrid Custody™ is a framework built on top of Smart Vaults™ and combines the best of "Self Custody" and "Managed Custody".
 
 You have absolute control of your private-keys and coins just like "Self Custody" and you can recover your Bitcoin even when all your private-keys are lost or stolen as if you opted for fully "Managed Custody" and you never needed to manage your private-keys to begin with. It's almost magic!
 
-With just a simple MultiSig transaction and a couple of Partially Signed Bitcoin Transactions distributed rather cleverly between the participants, Hybrid Custody using L2 Smart Vaults drastically increases the safety/security of your Bitcoin and even handles inheritance for you without any prior arrangements with your beneficiaries.
+With just a simple MultiSig transaction and a couple of Partially Signed Bitcoin Transactions distributed rather cleverly between the participants, Hybrid Custody using L2 Smart Vaults drastically increases the safety/security of your Bitcoin and even handles inheritance for you without any prior arrangements with your beneficiaries. (Watch videos linked below for detailed explanation of the Layer 2 protocol)
 
 This repository demostrates the feasibility and steps involved during setup, termination and recovery from Smart Vaults™ in their most basic form with just one private-key from "User" and one private-key from "Ledger" who doubles up as a Hybrid Custody Provider. 
 
 When User's private key is lost, he can recover his Bitcoin using just Ledger's private key as with any Managed Custody Provider.
 
-And when User's private-key is stolen and used to initiate the unlock-and-spend process, User can cosign a spending transaction with Ledger, override the attempt and safely recover your Bitcoin.
+And when User's private-key is stolen and used to initiate the unlock-and-spend process, User can cosign a spending transaction with Ledger, override the attempt and safely recover his Bitcoin.
 
 Lastly, if Ledger tries to steal User's Bitcoin using it's private-key, User can always override that unlock-and-spend attempt and safely transfer his Bitcoin to wherever he wishes using just his private-key.
 
