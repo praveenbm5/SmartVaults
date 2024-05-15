@@ -6,7 +6,7 @@ While securing one’s private-keys might seem trivial at first but ensuring saf
 
 Several methods and devices were proposed and implemented to alleviate this problem at least partially but none are as flexible and secure as one would desire them to be.
 
-Moreover, most devices, platforms and frameworks we use to generate our private-keys, store them securely and sign transactions with them have many known and unknown vulnerabilities. Relying solely on these contraptions and OPSEC to secure our funds/tokens can be risky to say the least.
+Moreover, most devices, platforms and frameworks we use to generate our private-keys, store them securely and sign transactions with them have many known and unknown vulnerabilities. Relying solely on these contraptions and OPSEC to secure our Bitcoin can be risky to say the least.
 
 Inheritance planning has also been a pain point for Crypto adoption. Self Custody of Bitcoin necessisates that we share the  credentials and more with our beneficiaries before hand complicating OPSEC and personal lives for everyone involved. Many a times, sharing credentials with beneficiaries is not even practically possible. Eg. Children.
 
