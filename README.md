@@ -10,7 +10,7 @@ Moreover, most devices, platforms and frameworks we use to generate our private-
 
 Inheritance planning has also been a pain point for Crypto adoption. Self Custody of Bitcoin necessisates that we share the  credentials and more with our beneficiaries before hand complicating OPSEC and personal lives for everyone involved. Many a times, sharing credentials with beneficiaries is not even practically possible. Eg. Children.
 
-This protocol and framework assumes that our private-keys will be lost or stolen, sooner than latter, and provides recourse even in those situations while handling inheritance seamlessly.
+This protocol and framework assumes that our private-keys will be lost or stolen, sooner than later, and provides recourse even in those situations while handling inheritance seamlessly.
 
 # Smart Vaults
 
